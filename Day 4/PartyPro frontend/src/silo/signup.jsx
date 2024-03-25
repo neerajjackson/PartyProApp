@@ -1,6 +1,5 @@
 import React from "react";
 import "../css/Register.css"
-import { useNavigate } from "react-router-dom";
 function SignUpForm() {
   const [state, setState] = React.useState({
     name: "",
@@ -14,7 +13,7 @@ function SignUpForm() {
       [evt.target.name]: value
     });
   };
-const nav=useNavigate();
+
   const handleOnSubmit = evt => {
     evt.preventDefault();
 
@@ -72,9 +71,7 @@ const nav=useNavigate();
           onChange={handleChange}
           placeholder="Password"
         />
-        <button className="rounded-lg border border-solid border-red-600 bg-red-600 text-white text-xs 
-        font-bold py-3 px-12 uppercase tracking-wide transition duration-300 ease-in-out transform hover:scale-105" onClick={() =>nav('/')}>
-          Sign Up</button>
+        <button className="rounded-lg border border-solid border-red-600 bg-red-600 text-white text-xs font-bold py-3 px-12 uppercase tracking-wide transition duration-300 ease-in-out transform hover:scale-105">Sign Up</button>
       </form>
     </div>
   );

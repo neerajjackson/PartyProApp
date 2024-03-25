@@ -48,20 +48,17 @@ const Navbar = () => {
       {/* <div className="nav-logo-container w-1/2">
       </div> */}
       <div className="navbar-links-container w-full justify-between flex ">
-        {/* <h1 className='text-2xl font-bold'>Party Pro</h1> */}
-        <div className="w-1/2">
-
+        <div className="w-1/12">
         <img src={Logo} alt=""  />
         </div>
-
         <div className="flex w-1/2">
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/work">Testimonials</a>
         <a href="/contact">Contact</a>
-        <a href="/login">Login</a>
+        <a href="/login"><button>Login</button></a>
         <a href="">
-          {/* <BsCart2 className="navbar-cart-icon" /> */}
+          <BsCart2 className="navbar-cart-icon" />
         </a>
         {/* <button className="primary-button">Book Now</button> */}
         </div>

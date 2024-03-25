@@ -5,64 +5,65 @@ function AdminDashboard() {
   return (
     
     <div className="container">
-      <navo>
-        <ul>
-          <li>
-            <a href="#" className="logo">
-            <img src="https://t4.ftcdn.net/jpg/04/75/00/99/360_F_475009987_zwsk4c77x3cTpcI3W1C1LU4pOSyPKaqi.jpg" alt="" />
-              <span className="nav-item">AdminBoard</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fas fa-home"></i>
-              <span className="nav-item">Home</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fas fa-user"></i>
-              <span className="nav-item">Profiles</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fas fa-wallet"></i>
-              <span className="nav-item">Wallet</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fas fa-chart-bar"></i>
-              <span className="nav-item">Analytics</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fas fa-tasks"></i>
-              <span className="nav-item">Tasks</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fas fa-cog"></i>
-              <span className="nav-item">Settings</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fas fa-question-circle"></i>
-              <span className="nav-item">Help</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="logout">
-              <i className="fas fa-sign-out-alt"></i>
-              <span className="nav-item">Log out</span>
-            </a>
-          </li>
-        </ul>
-      </navo>
+      <nav className="bg-gray-400 text-black">
+  <ul className="flex flex-col items-center">
+    <li>
+      <a href="#" className="flex items-center gap-2 p-4">
+        <img src="https://t4.ftcdn.net/jpg/04/75/00/99/360_F_475009987_zwsk4c77x3cTpcI3W1C1LU4pOSyPKaqi.jpg" alt="" className="w-6 h-6 rounded-full"></img>
+        <span className="font-semibold">AdminBoard</span>
+      </a>
+    </li>
+    <li>
+      <a href="/admin" className="flex items-center gap-2 p-4">
+        <i className="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="/profiles" className="flex items-center gap-2 p-4">
+        <i className="fas fa-user"></i>
+        <span>Add Events</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" className="flex items-center gap-2 p-4">
+        <i className="fas fa-wallet"></i>
+        <span>Wallet</span>
+      </a>
+    </li>
+    <li>
+      <a href="/analytics" className="flex items-center gap-2 p-4">
+        <i className="fas fa-chart-bar"></i>
+        <span>Analytics</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" className="flex items-center gap-2 p-4">
+        <i className="fas fa-tasks"></i>
+        <span>Tasks</span>
+      </a>
+    </li>
+    {/* <li>
+      <a href="#" className="flex items-center gap-2 p-4">
+        <i className="fas fa-cog"></i>
+        <span>Settings</span>
+      </a>
+    </li> */}
+    <li>
+      <a href="#" className="flex items-center gap-2 p-4">
+        <i className="fas fa-question-circle"></i>
+        <span>Help</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" className="flex items-center gap-2 p-4">
+        <i className="fas fa-sign-out-alt"></i>
+        <span>Log out</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
 
       <section className="main">
         <div className="main-top">
@@ -107,9 +108,9 @@ function AdminDashboard() {
           <div className="course-box">
             <ul>
               <li className="active">In progress</li>
-              <li>Booked</li>
+              {/* <li>Booked</li> */}
               {/* <li>Incoming</li> */}
-              <li>Finished</li>
+              {/* <li>Finished</li> */}
             </ul>
             <div className="course">
               <div className="box">

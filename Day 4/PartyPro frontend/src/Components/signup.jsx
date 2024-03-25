@@ -1,7 +1,8 @@
 import React from "react";
-import '../css/Register.css'
-function Register() {
+import '../assets/register.css'
+function SignUpForm() {
   const [state, setState] = React.useState({
+    name: "",
     email: "",
     password: ""
   });
@@ -16,8 +17,10 @@ function Register() {
   const handleOnSubmit = evt => {
     evt.preventDefault();
 
-    const { email, password } = state;
-    alert(`You are login with email: ${email} and password: ${password}`);
+    const { name, email, password } = state;
+    alert(
+      `You are sign up with name: ${name} email: ${email} and password: ${password}`
+    );
 
     for (const key in state) {
       setState({
@@ -28,10 +31,11 @@ function Register() {
   };
 
   return (
-    <div className="form-container sign-in-container">
+    <div className="form-container sign-up-container">
       <form onSubmit={handleOnSubmit}>
-        <h1>Sign in</h1>
-        {/* <div className="social-container">
+        <h1>Sign up</h1>
+        {/* <h1>Create Account</h1>
+        <div className="social-container">
           <a href="#" className="social">
             <i className="fab fa-facebook-f" />
           </a>
@@ -42,28 +46,32 @@ function Register() {
             <i className="fab fa-linkedin-in" />
           </a>
         </div> */}
-        <span>or use your account</span>
+        <span>or use your email for registration</span>
         <input
-        className="bg-gray-200 border-0 p-3 my-2 w-full"
+          type="text"
+          name="name"
+          value={state.name}
+          onChange={handleChange}
+          placeholder="Name"
+        />
+        <input
           type="email"
-          placeholder="Email"
           name="email"
           value={state.email}
           onChange={handleChange}
+          placeholder="Email"
         />
         <input
-        className="bg-gray-200 border-0 p-3 my-2 w-full"
           type="password"
           name="password"
-          placeholder="Password"
           value={state.password}
           onChange={handleChange}
+          placeholder="Password"
         />
-        <a href="#">Forgot your password?</a>
-        <button className="rounded-lg border border-solid border-red-600 bg-red-600 text-white text-xs font-bold py-3 px-12 uppercase tracking-wide transition duration-300 ease-in-out transform hover:scale-105">Sign In</button>
+        <button>Sign Up</button>
       </form>
     </div>
   );
 }
 
-export default Register;
+export default SignUpForm;

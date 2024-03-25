@@ -1,11 +1,11 @@
-// import React from 'react'
-import React from 'react';
-import { useState } from 'react';
-// import  { useState } from "react";
-// import '../css/Register.css'
-import Register from './RegiterForm';
-import SignUpForm from './signup';
-export default function LoginPage() {
+import React, { useState } from "react";
+import "../assets/register.css";
+// import SignInForm from "./SignIn";
+// import SignUpForm from "../SignUp";
+import SignUpForm from "./signup";
+import Register from "./register";
+
+export default function Mainlogin() {
   const [type, setType] = useState("signIn");
   const handleOnClick = text => {
     if (text !== type) {
@@ -16,11 +16,11 @@ export default function LoginPage() {
   const containerClass =
     "container " + (type === "signUp" ? "right-panel-active" : "");
   return (
+    <div className=" ">
     <>
-    <div className='bg-gray-100 flex justify-center items-center flex-col font-sans h-screen'>
+    <div className="App ">
+                      <h2 className='text-5xl font-bold  '> PartyPro</h2>
 
-    <div className="App">
-    <h1 className='text-5xl font-bold'>Party Pro</h1>
       <h2>Sign in/up Form</h2>
       <div className={containerClass} id="container">
         <SignUpForm />
@@ -28,12 +28,12 @@ export default function LoginPage() {
         <div className="overlay-container">
           <div className="overlay">
             <div className="overlay-panel overlay-left">
-              <h1 >Welcome Back!</h1>
+              <h1>Welcome Back!</h1>
               <p>
                 To keep connected with us please login 
               </p>
               <button
-                className="rounded-lg border border-solid border-red-600 bg-red-600 text-white text-xs font-bold py-3 px-12 uppercase tracking-wide transition duration-300 ease-in-out transform hover:scale-105"
+                className="ghost"
                 id="signIn"
                 onClick={() => handleOnClick("signIn")}
               >
@@ -43,8 +43,8 @@ export default function LoginPage() {
             <div className="overlay-panel overlay-right">
               <h1>Hello, Friend!</h1>
               <p>Lets start journey with us!</p>
-              <button 
-                className=" rounded-lg border border-solid border-red-600 bg-red-600 text-white text-xs font-bold py-3 px-12 uppercase tracking-wide transition duration-300 ease-in-out transform hover:scale-105"
+              <button
+                className="ghost "
                 id="signUp"
                 onClick={() => handleOnClick("signUp")}
                 >
@@ -53,9 +53,9 @@ export default function LoginPage() {
             </div>
           </div>
         </div>
-      </div>
     </div>
-                </div>
+    </div>
                 </>
+      </div>
   );
 }

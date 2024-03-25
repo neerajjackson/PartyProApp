@@ -1,5 +1,5 @@
 import React from "react";
-import '../css/Register.css'
+import '../assets/register.css'
 function Register() {
   const [state, setState] = React.useState({
     email: "",
@@ -44,7 +44,6 @@ function Register() {
         </div> */}
         <span>or use your account</span>
         <input
-        className="bg-gray-200 border-0 p-3 my-2 w-full"
           type="email"
           placeholder="Email"
           name="email"
@@ -52,7 +51,6 @@ function Register() {
           onChange={handleChange}
         />
         <input
-        className="bg-gray-200 border-0 p-3 my-2 w-full"
           type="password"
           name="password"
           placeholder="Password"
@@ -60,7 +58,7 @@ function Register() {
           onChange={handleChange}
         />
         <a href="#">Forgot your password?</a>
-        <button className="rounded-lg border border-solid border-red-600 bg-red-600 text-white text-xs font-bold py-3 px-12 uppercase tracking-wide transition duration-300 ease-in-out transform hover:scale-105">Sign In</button>
+        <button>Sign In</button>
       </form>
     </div>
   );

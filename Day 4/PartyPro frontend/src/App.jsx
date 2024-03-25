@@ -12,12 +12,15 @@ import Contact from "./Components/Contact";
 // import { NavLink } from 'react-router-dom'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import AdminDashboard from "./Components/Admindashboard";
+import AdminDashboard from "./Admin/Admindashboard";
 import About from "./Components/About";
 import Navbar from "./Components/Navbar";
 import LoginPage from "./silo/Login";
 import React from "react";
-import Sidebar from "./Components/Sidebar";
+import AdminProfiles from "./Admin/AdminProfiles";
+import AdminAnalytics from "./Admin/AdminAnalytics";
+import UserPage from "./User/user";
+// import AddEventForm from "./Admin/AddEventForm";
 
 
 const LazyLandingPage = React.lazy(() =>
@@ -28,10 +31,9 @@ setTimeout(
   )
   )
   );
-
   const LazyLoadingIcon = () => (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <img src="https://media.tenor.com/jAhABeTndDYAAAAi/luffy-one.gif" alt="Lazy Loading Icon" />
+      <img src="https://media.tenor.com/_fJz-Yp9XMAAAAAi/sharingan-eyes.gif" alt="Lazy Loading Icon" />
     </div>
   );
 
@@ -46,7 +48,11 @@ function App() {
       {/* <Route path='/' element={<><Navbar/><Home /><Work/></>} /> */}
       <Route path='/work' element={<><Navbar/><Work /></>} />
       <Route path='/admin' element={<AdminDashboard />} />
-      <Route path='/about' element={<About/>} />
+      <Route path='/profiles' element={<AdminProfiles />} />
+      <Route path='/analytics' element={<AdminAnalytics />} />
+      <Route path='/admin/about' element={<About/>} />
+      <Route path='/user' element={<UserPage/>} />
+      {/* <Route path='/admin/events' element={<AddEventForm/>} /> */}
       <Route path='/login' element={<LoginPage/>}/>
       <Route path="/" element={
     <>
